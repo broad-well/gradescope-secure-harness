@@ -2,6 +2,6 @@
 
 set -Eeuo pipefail
 
-gcc -Wall -Werror source/submission.c -o source/submission
+gcc -Wall -Werror submission/submission.c -o submission/submission
 
-su student -c "source/submission"
+runuser -u student -- "submission/submission"

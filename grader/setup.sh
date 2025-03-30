@@ -1,4 +1,6 @@
+#!/bin/sh
+
 adduser student --no-create-home --disabled-password --gecos ""
-chmod -R o= *
-chown -R student source
-ls -lr .
+chmod -R o= /autograder/*
+mkdir -p /autograder/results /autograder/submission
+chown -R student /autograder/submission
